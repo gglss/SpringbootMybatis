@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+#logging:
+#  file:
+#    path: D:\me\code\trading_system_interface\InterfaceOptimize\src\main\java\com\course\logs
+#    name: mylog.log
+
+spring:
+  application:
+    name: myTest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql//8.142.144.75:3306/course
+#    url:jdbc: mysql//8.142.144.75:3306/course
+    username: root
+    password: william
+
+mybatis:
+  type-aliases-package: com.course.entity
+  mapper-locations:
+    - mybatis/mapper/*

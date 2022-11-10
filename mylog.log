@@ -1,0 +1,496 @@
+2022-11-01 09:18:13.224  INFO 25416 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 25416 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 09:18:13.224  INFO 25416 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 09:18:14.208  INFO 25416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 09:18:14.224  INFO 25416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 09:18:14.224  INFO 25416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 09:18:14.286  INFO 25416 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 09:18:14.286  INFO 25416 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1000 ms
+2022-11-01 09:18:14.847  WARN 25416 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 09:18:14.863  WARN 25416 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 09:18:14.863  INFO 25416 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 09:18:14.879  INFO 25416 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 09:18:14.894 ERROR 25416 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:26) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 10:16:18.424  INFO 34172 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 34172 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 10:16:18.424  INFO 34172 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 10:16:19.270  INFO 34172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 10:16:19.280  INFO 34172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 10:16:19.280  INFO 34172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 10:16:19.351  INFO 34172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 10:16:19.351  INFO 34172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 882 ms
+2022-11-01 10:16:19.828  WARN 34172 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 10:16:19.830  WARN 34172 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 10:16:19.830  INFO 34172 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 10:16:19.839  INFO 34172 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 10:16:19.850 ERROR 34172 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:26) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 13:14:51.028  INFO 30172 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 30172 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 13:14:51.031  INFO 30172 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 13:14:51.903  INFO 30172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 13:14:51.910  INFO 30172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 13:14:51.910  INFO 30172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 13:14:51.984  INFO 30172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 13:14:51.984  INFO 30172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 917 ms
+2022-11-01 13:14:52.420  WARN 30172 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 13:14:52.421  WARN 30172 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 13:14:52.423  INFO 30172 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 13:14:52.431  INFO 30172 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 13:14:52.449 ERROR 30172 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:26) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 13:22:33.289  INFO 37476 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 37476 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 13:22:33.292  INFO 37476 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 13:22:34.072  INFO 37476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 13:22:34.079  INFO 37476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 13:22:34.079  INFO 37476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 13:22:34.148  INFO 37476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 13:22:34.148  INFO 37476 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 811 ms
+2022-11-01 13:22:34.578  WARN 37476 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 13:22:34.580  WARN 37476 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 13:22:34.583  INFO 37476 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 13:22:34.591  INFO 37476 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 13:22:34.605 ERROR 37476 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:28) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 13:26:02.977  INFO 40056 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 40056 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 13:26:02.980  INFO 40056 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 13:26:03.826  INFO 40056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 13:26:03.833  INFO 40056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 13:26:03.833  INFO 40056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 13:26:03.911  INFO 40056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 13:26:03.911  INFO 40056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 873 ms
+2022-11-01 13:26:04.323  WARN 40056 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 13:26:04.325  WARN 40056 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 13:26:04.326  INFO 40056 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 13:26:04.335  INFO 40056 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 13:26:04.349 ERROR 40056 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:28) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 13:36:41.215  INFO 40252 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 40252 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 13:36:41.218  INFO 40252 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 13:36:41.715  INFO 40252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-11-01 13:36:41.723  INFO 40252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2022-11-01 13:36:42.088  INFO 40252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 13:36:42.095  INFO 40252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 13:36:42.095  INFO 40252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 13:36:42.171  INFO 40252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 13:36:42.172  INFO 40252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 916 ms
+2022-11-01 13:36:42.730  WARN 40252 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 13:36:42.732  WARN 40252 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 13:36:42.734  INFO 40252 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 13:36:42.745  INFO 40252 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 13:36:42.763 ERROR 40252 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:28) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 13:45:21.221  INFO 24800 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 24800 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 13:45:21.223  INFO 24800 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 13:45:21.751  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-11-01 13:45:21.758  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2022-11-01 13:45:22.110  INFO 24800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 13:45:22.118  INFO 24800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 13:45:22.118  INFO 24800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 13:45:22.191  INFO 24800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 13:45:22.191  INFO 24800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 928 ms
+2022-11-01 13:45:22.666  WARN 24800 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 13:45:22.667  WARN 24800 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 13:45:22.669  INFO 24800 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 13:45:22.677  INFO 24800 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 13:45:22.691 ERROR 24800 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:28) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 14:17:35.092  INFO 35984 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 35984 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 14:17:35.095  INFO 35984 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 14:17:35.639  INFO 35984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-11-01 14:17:35.649  INFO 35984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2022-11-01 14:17:36.035  INFO 35984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 14:17:36.043  INFO 35984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 14:17:36.043  INFO 35984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 14:17:36.129  INFO 35984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 14:17:36.130  INFO 35984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 993 ms
+2022-11-01 14:17:36.681  WARN 35984 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+2022-11-01 14:17:36.683  WARN 35984 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 14:17:36.685  INFO 35984 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 14:17:36.693  INFO 35984 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 14:17:36.713 ERROR 35984 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]
+	at com.course.Application.main(Application.java:28) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.DataSourceTransactionManager]: Factory method 'transactionManager' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/jdbc/support/JdbcTransactionManager
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.createTransactionManager(DataSourceTransactionManagerAutoConfiguration.java:67) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration.transactionManager(DataSourceTransactionManagerAutoConfiguration.java:61) ~[spring-boot-autoconfigure-2.5.6.jar:2.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.jdbc.support.JdbcTransactionManager
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 27 common frames omitted
+
+2022-11-01 14:23:09.756  INFO 12188 --- [main] com.course.Application                   : Starting Application using Java 1.8.0_202 on LAPTOP-52L2UDTT with PID 12188 (D:\me\java_test_pro\SpringbootMybatis\target\classes started by DD in D:\me\java_test_pro\SpringbootMybatis)
+2022-11-01 14:23:09.759  INFO 12188 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2022-11-01 14:23:10.574  INFO 12188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-11-01 14:23:10.580  INFO 12188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 14:23:10.581  INFO 12188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-11-01 14:23:10.649  INFO 12188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-01 14:23:10.650  INFO 12188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 843 ms
+2022-11-01 14:23:10.966  WARN 12188 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]: Factory method 'requestMappingHandlerMapping' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.core.log.LogDelegateFactory.getHiddenLog(Ljava/lang/String;)Lorg/apache/commons/logging/Log;
+2022-11-01 14:23:10.967  WARN 12188 --- [main] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'application' threw an exception: java.lang.NullPointerException
+2022-11-01 14:23:10.969  INFO 12188 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 14:23:10.978  INFO 12188 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-01 14:23:10.989 ERROR 12188 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.web.servlet.handler.AbstractHandlerMapping.<init>(AbstractHandlerMapping.java:83)
+
+The following method did not exist:
+
+    org.springframework.core.log.LogDelegateFactory.getHiddenLog(Ljava/lang/String;)Lorg/apache/commons/logging/Log;
+
+The method's class, org.springframework.core.log.LogDelegateFactory, is available from the following locations:
+
+    jar:file:/C:/Users/DD/.m2/repository/org/springframework/spring-core/5.3.4/spring-core-5.3.4.jar!/org/springframework/core/log/LogDelegateFactory.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.springframework.core.log.LogDelegateFactory: file:/C:/Users/DD/.m2/repository/org/springframework/spring-core/5.3.4/spring-core-5.3.4.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.core.log.LogDelegateFactory
+
